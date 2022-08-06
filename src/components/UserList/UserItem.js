@@ -1,9 +1,10 @@
+import Card from "../UI/Card";
+
 const UserItem = (props) => {
   return (
-    <div>
-      <div>{props.user.name}</div>
-      <div>{props.user.age}</div>
-    </div>
+    <li>
+      {props.user.name} ({props.user.age} years old)
+    </li>
   );
 };
 
