@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Card from "../UI/Card";
+import styles from "./InputForm.module.css";
+import Button from "../UI/Button";
 
 const InputForm = (props) => {
   const [user, setUser] = useState({
@@ -33,25 +36,29 @@ const InputForm = (props) => {
   };
 
   return (
-    <form onSubmit={newUserHandler}>
-      <div>
-        <label>Name</label>
-        <input
-          type="text"
-          value={user.name}
-          onChange={nameInputHandler}
-        ></input>
-      </div>
-      <div>
-        <label>Age</label>
-        <input
-          type="number"
-          value={user.age}
-          onChange={ageInputHandler}
-        ></input>
-      </div>
-      <button type="submit">Add User</button>
-    </form>
+    <Card className={styles.input}>
+      <form onSubmit={newUserHandler}>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            value={user.name}
+            onChange={nameInputHandler}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="age">Age</label>
+          <input
+            id="age"
+            type="number"
+            value={user.age}
+            onChange={ageInputHandler}
+          ></input>
+        </div>
+        <Button type="submit">Add User</Button>
+      </form>
+    </Card>
   );
 };
 

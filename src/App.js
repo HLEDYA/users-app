@@ -3,6 +3,7 @@ import "./App.css";
 import InputForm from "./components/InputForm/InputForm";
 import UserList from "./components/UserList/UserList";
 import { useState } from "react";
+import Card from "./components/UI/Card";
 
 const DummyUserList = [
   { name: "Ahmet", age: 12, id: 1 },
